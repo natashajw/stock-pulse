@@ -36,7 +36,7 @@ function App() {
     // live prices
     setLoading(true)
     fetch(`https://www.alphavantage.co/query?
-      function=GLOBAL_QUOTE&symbol=${symbol}&apikey=05RK7DTQHMB3TH7T`)
+      function=GLOBAL_QUOTE&symbol=${symbol}&apikey=Q9OQWB4E620A5LKZ`)
       .then(res => res.json())
       .then(data => {
         const quote = data['Global Quote']
@@ -56,7 +56,7 @@ function App() {
     setChartLoading(true)
    
     fetch(`https://www.alphavantage.co/query?
-      function=TIME_SERIES_DAILY&symbol=${symbol}&apikey=05RK7DTQHMB3TH7T`)
+      function=TIME_SERIES_DAILY&symbol=${symbol}&apikey=Q9OQWB4E620A5LKZ`)
       .then(res => res.json())
       .then(data => {
         const timeSeries = data['Time Series (Daily)']
