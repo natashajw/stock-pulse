@@ -148,23 +148,3 @@ body {
 
 
 
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
-body {
-  background-color: #fff1e5;
-  color: #33302e;
-  font-family: Georgia, 'Times New Roman', serif;
-}
-
-a {
-  color: #990000;
-  text-decoration: none;
-}
-
-a:hover {
-  text-decoration: underline;
-}
