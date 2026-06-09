@@ -30,7 +30,7 @@ function App() {
   const [chartLoading, setChartLoading] = useState(true)
 
   useEffect(() => {
-    const TWELVE_KEY = import.meta.env.VITE_TWELVE_KEY
+    const TWELVEDATA_KEY = import.meta.env.VITE_TWELVEDATA_KEY
     const FINNHUB_KEY = import.meta.env.VITE_FINNHUB_KEY
 
     // live prices
