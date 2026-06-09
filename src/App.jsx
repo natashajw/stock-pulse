@@ -30,13 +30,12 @@ function App() {
   const [chartLoading, setChartLoading] = useState(true)
 
   useEffect(() => {
-    const ALPHA_KEY = import.meta.env.VITE_ALPHA_VANTAGE_KEY
+    const TWELVE_KEY = import.meta.env.VITE_TWELVE_KEY
     const FINNHUB_KEY = import.meta.env.VITE_FINNHUB_KEY
 
     // live prices
     setLoading(true)
-    fetch(`https://www.alphavantage.co/query?
-      function=GLOBAL_QUOTE&symbol=${symbol}&apikey=5LSX6UCP1UVJVE60`)
+    fetch(`https://api.twelvedata.com/price?symbol=${symbol}&apikey=$85b80934f0cc4fb69a847203361de483`)
       .then(res => res.json())
       .then(data => {
         const quote = data['Global Quote']
@@ -55,8 +54,7 @@ function App() {
       // chart data
     setChartLoading(true)
    
-    fetch(`https://www.alphavantage.co/query?
-      function=TIME_SERIES_DAILY&symbol=${symbol}&apikey=5LSX6UCP1UVJVE60`)
+    fetch(`https://api.twelvedata.com/price?symbol=${symbol}&apikey=$85b80934f0cc4fb69a847203361de483`)
       .then(res => res.json())
       .then(data => {
         const timeSeries = data['Time Series (Daily)']
