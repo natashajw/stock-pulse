@@ -36,7 +36,7 @@ function App() {
     // live prices
     setLoading(true)
     fetch(`https://www.alphavantage.co/query?
-      function=GLOBAL_QUOTE&symbol=${symbol}&apikey=Q9OQWB4E620A5LKZ`)
+      function=GLOBAL_QUOTE&symbol=${symbol}&apikey=5LSX6UCP1UVJVE60`)
       .then(res => res.json())
       .then(data => {
         const quote = data['Global Quote']
@@ -56,7 +56,7 @@ function App() {
     setChartLoading(true)
    
     fetch(`https://www.alphavantage.co/query?
-      function=TIME_SERIES_DAILY&symbol=${symbol}&apikey=Q9OQWB4E620A5LKZ`)
+      function=TIME_SERIES_DAILY&symbol=${symbol}&apikey=5LSX6UCP1UVJVE60`)
       .then(res => res.json())
       .then(data => {
         const timeSeries = data['Time Series (Daily)']
@@ -87,7 +87,7 @@ function App() {
     const toDate = today.toISOString().split('T')[0]
     const fromDate = lastWeek.toISOString().split('T')[0]
 
-    fetch(`https://finnhub.io/api/v1/company-news?symbol=${symbol}&from=${fromDate}&to=${toDate}&token=d8ft219r01qp8bvdpdtgd8ft219r01qp8bvdpdu0`)
+    fetch(`https://finnhub.io/api/v1/company-news?symbol=${symbol}&from=${fromDate}&to=${toDate}&token=d8jq7rpr01qh6g3rrn1gd8jq7rpr01qh6g3rrn20`)
       .then(res => res.json())
       .then(data => {
         if (Array.isArray(data)) {
